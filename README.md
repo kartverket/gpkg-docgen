@@ -26,20 +26,15 @@ Each HTML report includes:
 ---
 
 ## 📁 Project Structure
-
-
-.
+```
 ├── script_standalone.py          # Main script to generate HTML sheets
 ├── template_standalone.html      # Jinja2 HTML template
 ├── metadata.xlsx                 # Excel metadata (sheet = 'metadata')
 ├── *.gpkg                        # One or more GeoPackage files
 └── assets/                       # Supporting files for HTML output
     ├── countries.geojson         # Simplified basemap for Leaflet
-    ├── leaflet.css               # Leaflet stylesheet
-    ├── leaflet.js                # Leaflet JS library
     ├── marker-icon.png           # Default map marker icon
     ├── marker-shadow.png         # Marker shadow
-    └── ugradert.png              # Optional custom marker icon
 ````
 
 ---
