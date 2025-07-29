@@ -110,7 +110,4 @@ MIT License. See `LICENSE` file for details.
 Henrik G. Schüller
 [github.com/henrik716](https://github.com/henrik716)
 
-```
-
----
 
