@@ -26,7 +26,7 @@ Each HTML report includes:
 ---
 
 ## 📁 Project Structure
-```
+````
 ├── script_standalone.py          # Main script to generate HTML sheets
 ├── template_standalone.html      # Jinja2 HTML template
 ├── metadata.xlsx                 # Excel metadata (sheet = 'metadata')
