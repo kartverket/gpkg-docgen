@@ -27,7 +27,7 @@ Each HTML report includes:
 
 ## 📁 Project Structure
 
-```plaintext
+
 .
 ├── script_standalone.py          # Main script to generate HTML sheets
 ├── template_standalone.html      # Jinja2 HTML template
