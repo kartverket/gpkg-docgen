@@ -95,7 +95,7 @@ Example:
 ## 📌 Notes
 
 * Layers with names starting with `code_` (e.g. `code_buildings_type`) are treated as code lists and linked to the relevant fields.
-* If no code table is found, short string fields with few unique values are auto-detected as potential domain lists.
+* If no code table is found, short string fields with few unique values are auto-detected and considered as 'codelists'.
 * Geometry is simplified for preview purposes only – original data is untouched.
 
 ---
