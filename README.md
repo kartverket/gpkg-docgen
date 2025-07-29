@@ -122,7 +122,7 @@ You can also combine both (e.g., keeping `countries.geojson` as an overlay, and 
 
 Instead of bundling Leaflet JS/CSS in each HTML file, you can modify the template to load these from the official CDN:
 
-In `template_standalone.html`, replace the local added javascript and css for leaflet js
+In `template_standalone.html`, replace the javascript and css for leaflet js
 
 With this:
 
