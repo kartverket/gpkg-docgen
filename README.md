@@ -99,6 +99,65 @@ Example:
 
 ---
 
+## 🌐 Optional: Make It Online
+
+This tool is designed to produce **fully self-contained, offline HTML files** — including the basemap (`countries.geojson`) and all Leaflet assets (`leaflet.js`, `leaflet.css`, marker icons, etc.). However, you can easily modify the setup to reduce file size and load maps dynamically using online sources.
+
+### 🔁 Use an online basemap
+
+To switch from the offline `countries.geojson` to a live background map like OpenStreetMap, update the map initialization block in `template_standalone.html`:
+
+```javascript
+// Replace this:
+// L.geoJSON(world_data).addTo(map);
+
+// With this:
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 18,
+    attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+```
+
+You can also combine both (e.g., keeping `countries.geojson` as an overlay, and OSM underneath as a base layer).
+
+---
+
+### 📡 Load Leaflet from CDN
+
+Instead of bundling Leaflet JS/CSS in each HTML file, you can modify the template to load these from the official CDN:
+
+In `template_standalone.html`, replace the local asset links:
+
+```html
+<!-- Instead of this -->
+<link rel="stylesheet" href="assets/leaflet.css" />
+<script src="assets/leaflet.js"></script>
+```
+
+Use this:
+
+```html
+<!-- Load Leaflet from CDN -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha512-sA+eP4EqXKjRWr8K4kS2YZ5YzP3X27xem7R7Hl+JmriA04V9X7r3VYQqx2xAoR0FqIknsWIX3wD+J7XjG0zHEQ=="
+  crossorigin=""
+/>
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha512-nMMMyM1JK1H9zY9Pa1GRqQHXzYkk+ZcgzODIYxWx0m3YUNb3ZQ1Aq2hrk6o0uJbdN6tYP6llloAI8aT/HdlxNQ=="
+  crossorigin=""
+></script>
+```
+
+> 💡 **Why use CDN?**
+>
+> * Lighter HTML output
+> * Faster initial load (especially over internet)
+> * Always latest stable Leaflet version (unless you pin it)
+
+---
 ## 📄 License
 
 MIT License. See `LICENSE` file for details.
