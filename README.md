@@ -3,7 +3,8 @@
 
 📦 **Self-documenting HTML generator for GeoPackages**
 
-`geopkg-docgen` is a lightweight Python tool that reads one or more [GeoPackage (.gpkg)](https://www.geopackage.org/) files along with metadata from an Excel file, and generates fully self-contained HTML product sheets.
+`geopkg-docgen` is a lightweight Python tool that reads one or more [GeoPackage (.gpkg)](https://www.geopackage.org/)
+files along with metadata from an Excel file, and generates fully self-contained HTML product sheets.
 
 Each HTML report includes:
 - General and dataset-specific metadata (from Excel)
