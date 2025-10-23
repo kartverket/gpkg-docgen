@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: gpkg-docgen
+spec:
+  type: service
+  owner: datadeling_og_distribusjon
+  lifecycle: production
